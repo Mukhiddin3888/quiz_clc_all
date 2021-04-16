@@ -1,0 +1,16 @@
+void main() {
+  String input = 'Shamsiddin';
+  Map birthday = {
+    'Mukhiddin': "1999.09.10",
+    'Shamsiddin': "1999.09.11",
+    'Asrol': "1999 / 09 / 12",
+  };
+
+  print('Welcome to the birthday dictionary. We know the birthdays of:');
+  print(birthday.keys);
+
+  if (birthday.containsKey('Shamsiddin')) {
+    print('$input birthday is');
+    print(birthday[input]);
+  }
+}

@@ -1,0 +1,22 @@
+void main() {
+  int input = 145;
+
+  print(task11(input));
+}
+
+String task11(int input) {
+  var res = 0;
+  var num = input.toString();
+  for (var i = 0; i < num.length; i++) {
+    var integer = num[i] as int;
+    res += factorial(integer);
+  }
+
+  if (res == input) {
+    return 'STRONG!!!';
+  } else {
+    return 'NOT STRONG';
+  }
+}
+
+int factorial(int n) => n == 0 ? 1 : n * factorial(n - 1);

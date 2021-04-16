@@ -1,0 +1,19 @@
+void main() {
+  String name = 'Shamsiddin';
+  int age = 0;
+
+  var calculatedAge = CalculateAge(age);
+
+  print('Hi $name you have to live $calculatedAge years until get 100');
+}
+
+int CalculateAge(int age) {
+
+  if (age > 0 && age <= 100) {
+    var result = 100 - age;
+    return result;
+  } else {
+    print('Please input proper input');
+    return 0;
+  }
+}

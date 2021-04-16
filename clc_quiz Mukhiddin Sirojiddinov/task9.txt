@@ -1,0 +1,28 @@
+void main() {
+  //var a = "abcdefghijklmnopqrstuvwxyz";
+
+  var a = "xyaabbbccccdefww";
+  var b = "xxxxyyyyabklmopq";
+  print(longest(a, b));
+}
+
+String longest(String a, String b) {
+  Set aSet = {};
+  for (var i = 0; i < a.length; i++) {
+    aSet.add(a[i]);
+  }
+  ;
+
+  Set bSet = {};
+  for (var i = 0; i < b.length; i++) {
+    bSet.add(b[i]);
+  }
+  ;
+
+  Set c = aSet.union(bSet);
+  dynamic result = c.toList();
+  result.sort();
+  String res = result.toString();
+
+  return res;
+}
